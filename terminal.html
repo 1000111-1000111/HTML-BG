@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        html{
+          background: #0099cc;
+        }
+        body{
+          background: #0099cc;
+          color: #fff;
+          font-family: monospace;
+          font-size: 2em;
+          padding: 1em;
+        }
+        #cursor{
+            font-weight: bolder;
+            animation: flash 1s infinite;
+        }
+        .line{
+          margin-bottom: 0.5em;
+        }
+        @keyframes flash {
+            49% {
+                opacity: 0;
+            }
+            51% {
+                opacity: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const cursor = document.createElement('span');
+        cursor.id = 'cursor';
+        cursor.textContent = '_';
+
+        var step = 1;
+        function createLine(){
+            const line = document.createElement('div');
+            line.className = 'line';
+            line.textContent = '>>>  ';
+            document.body.appendChild(line);
+            line.appendChild(cursor);
+            return line;
+        }
+
+        function writeLine(line, text){
+            text = text.split('');
+            let index=0;
+            var a=setInterval(() => {
+                line.removeChild(cursor)
+                line.textContent += text[index];
+                line.appendChild(cursor)
+                index++;
+                if(index === text.length){
+                    clearInterval(a)
+                    step++;
+                    start();
+                }
+            }, 50);
+        }
+        function start(){
+            switch (step){
+                case 1:
+                    writeLine(createLine(), 'Welcome!');
+                    break;
+                case 2:
+                    writeLine(createLine(), "Today's date is: "+new Date().toDateString());
+                    break;
+                case 3:
+                    writeLine(createLine(), 'Hello, World!');
+                    break;
+                default:
+                    return createLine();
+            }
+        }
+        start();
+
+    </script>
+</body>
+</html>

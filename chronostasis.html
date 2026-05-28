@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chronostasis</title>
+</head>
+<body>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            background-color: #0099cc;
+        }
+    </style>
+    <svg width="100%" height="100%"  viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" >
+        <!--<path d="" id="H" stroke="#fff" stroke-width="1" fill="transparent"></path>-->
+        <!--<path d="" id="M" stroke="#fff" stroke-width="1" fill="transparent"></path>-->
+<!--        <path d="" id="S" stroke="#fff" stroke-width="1" fill="transparent"></path>-->
+        <g>
+            <circle r="5" id="H" stroke-width="0.5" fill="transparent" stroke="#fff"></circle>
+            <circle r="2" id="M" stroke-width="0.5" fill="transparent" stroke="#fff"></circle>
+            <circle r="1" id="S" stroke-width="0.5" fill="transparent" stroke="#fff"></circle>
+            <circle cx="50" cy="50" r="40" stroke-width="0.5" fill="transparent" stroke="#fff"/>
+            <circle cx="50" cy="50" r="27" stroke-width="0.5" fill="transparent" stroke="#fff"/>
+        </g>
+
+<!--        <circle cx="50" cy="50" r="0.5" stroke-width="1" fill="transparent" stroke="#fff"/>-->
+        <g font-family="Times" fill="#fff" font-size="5">
+            <text x="65" y="22.1891">I</text>
+            <text x="77.8109" y="35">II</text>
+            <text x="82.5" y="52.5">III</text>
+            <text x="77.8109" y="70">IV</text>
+            <text x="65" y="82.8109">V</text>
+            <text x="47.5" y="87.5">VI</text>
+            <text x="30" y="82.8109">VII</text>
+            <text x="17.6891" y="70">VIII</text>
+            <text x="12.5" y="52.5">IX</text>
+            <text x="17.1891" y="35">X</text>
+            <text x="30" y="22.1891">XI</text>
+            <text x="47.5" y="17.5">XII</text>
+        </g>
+
+        <g stroke="#fff" stroke-width="0.2" fill="transparent">
+            <path d="M 29 37.8756 L 71 37.8756 L 50 74.2487 Z"></path>
+            <path d="M 29 62.1244 L 71 62.1244 L 50 25.7513 Z"></path>
+        </g>
+    </svg>
+    <script>
+        // window.addEventListener('resize', () => {
+        //     canvas.width = window.innerWidth;
+        //     canvas.height = window.innerHeight;
+        // });
+    </script>
+    <script>
+        const updateRotation=(h,m,s,ms)=>{
+            let angleH=90-360/12*(h+m/60+s/3600+ms/3600000);
+            let angleM=90-360/60*(m+s/60+ms/60000);
+            let angleS=90-360/60*(s+ms/1000);
+            const hLen=40;
+            document.getElementById('H').setAttribute('cx',`${50+hLen*Math.cos(angleH*Math.PI/180)}`);
+            document.getElementById('H').setAttribute('cy',`${50-hLen*Math.sin(angleH*Math.PI/180)}`);
+            document.getElementById('M').setAttribute('cx',`${50+hLen*Math.cos(angleM*Math.PI/180)}`);
+            document.getElementById('M').setAttribute('cy',`${50-hLen*Math.sin(angleM*Math.PI/180)}`);
+            document.getElementById('S').setAttribute('cx',`${50+hLen*Math.cos(angleS*Math.PI/180)}`);
+            document.getElementById('S').setAttribute('cy',`${50-hLen*Math.sin(angleS*Math.PI/180)}`);
+        }
+
+
+
+        var h,m,s,ms;
+        setInterval(() => {
+            const date = new Date();
+            h = date.getHours();
+            m = date.getMinutes();
+            s = date.getSeconds();
+            ms = date.getMilliseconds();
+            updateRotation(h,m,s,ms);
+        }, 10);
+    </script>
+</body>
+</html>

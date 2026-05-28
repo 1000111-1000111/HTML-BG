@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background-color: black;
+            overflow: hidden;
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes fade {
+            0% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        svg {
+            animation: rotate 30s linear infinite, fade 1.5s infinite alternate;
+        }
+    </style>
+</head>
+<body>
+     <svg width="100vw" height="100vh" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#f0f0fa" stroke-width="0.3" fill="transparent" transform="">
+            <circle cx="50" cy="50" r="49"/>
+            <circle cx="50" cy="50" r="47"/>
+            <circle cx="50" cy="50" r="42"/>
+            <circle cx="50" cy="50" r="6" stroke-width="0.5" fill="#fff"/>
+            <g>
+                <circle cx="50" cy="25" r="5"/>
+                <circle cx="50" cy="75" r="5"/>
+                <circle cx="71.6506" cy="37.5" r="5"/>
+                <circle cx="71.6506" cy="62.5" r="5"/>
+                <circle cx="28.3494" cy="37.5" r="5"/>
+                <circle cx="28.3494" cy="62.5" r="5"/>
+            </g>
+            <g> <!--exterior-->
+                <path d="
+                      M 50 10
+                      A 20 15 90 0 0 43 25
+                      A 5 5 0 1 1 57 25
+                      A 20 15 90 0 0 50 10"
+                    />
+
+                <path d="
+                      M 50 90
+                      A 20 15 90 0 1 43 75
+                      A 5 5 0 1 0 57 75
+                      A 20 15 90 0 1 50 90"
+                    />
+
+                <path d="
+                      M 84.6410 30
+                      A 20 15 0 0 0 68.1506 31.4378
+                      A 5 5 0 1 1 75.1506 43.5621
+                      A 15 20 0 0 0 84.6410 30"
+                    />
+
+                <path d="
+                      M 84.6410 70
+                      A 20 15 0 0 1 68.1506 68.5622
+                      A 5 5 0 1 0 75.1506 56.4379
+                      A 15 20 0 0 1 84.6410 70"
+                    />
+
+                <path d="
+                      M 15.3590 30
+                      A 20 15 0 0 1 31.8494 31.4378
+                      A 5 5 0 1 0 24.8494 43.5621
+                      A 15 20 0 0 1 15.3590 30"
+                    />
+
+                <path d="
+                      M 15.3590 70
+                      A 20 15 0 0 0 31.8494 68.5622
+                      A 5 5 0 1 1 24.8494 56.4379
+                      A 15 20 0 0 0 15.3590 70"
+                    />
+
+            </g>
+            <g><!--interior-->
+                <path d="
+                        M 50 40
+                        A 20 15 90 0 1 43 25
+                        A 5 5 0 1 0 57 25
+                        A 20 15 90 0 1 50 40"
+                    />
+
+                <path d="
+                        M 50 60
+                        A 20 15 90 0 0 43 75
+                        A 5 5 0 1 1 57 75
+                        A 20 15 90 0 0 50 60">
+                </path>
+
+                <path d="
+                        M 58.6603 45
+                        A 15 20 0 0 1 68.1506 31.4378
+                        A 5 5 0 1 0 75.1506 43.5621
+                        A 20 15 0 0 1 58.6603 45"
+                    />
+
+                <path d="
+                        M 58.6603 55
+                        A 15 20 0 0 0 68.1506 68.5622
+                        A 5 5 0 1 1 75.1506 56.4379
+                        A 20 15 0 0 0 58.6603 55"
+                    />
+
+                <path d="
+                        M 41.3397 45
+                        A 15 20 0 0 0 31.8494 31.4378
+                        A 5 5 0 1 1 24.8494 43.5621
+                        A 20 15 0 0 0 41.3397 45"
+                    />
+
+                <path d="
+                        M 41.3397 55
+                        A 15 20 0 0 1 31.8494 68.5622
+                        A 5 5 0 1 0 24.8494 56.4379
+                        A 20 15 0 0 1 41.3397 55"
+                    />
+
+            </g>
+            <g>
+                <path d="
+                        M 46.5138 10.1522
+                        A 40 40 0 0 0 17.2339 27.0569
+                        A 20 20 0 0 1 27.3726 27.3726
+                        A 35 35 0 0 1 39.0554 19.9298
+                        A 40 40 0 0 1 46.5138 10.1522"
+                    />
+
+                <path d="
+                        M 53.4862 10.1522
+                        A 40 40 0 0 1 82.7661 27.0569
+                        A 20 20 0 0 0 72.6274 27.3726
+                        A 35 35 0 0 0 60.9446 19.9298
+                        A 40 40 0 0 0 53.4862 10.1522"
+                    />
+
+                <path d="
+                        M 46.5138 89.8478
+                        A 40 40 0 0 1 17.2339 72.9431
+                        A 20 20 0 0 0 27.3726 72.6274
+                        A 35 35 0 0 0 39.0554 80.0702
+                        A 40 40 0 0 0 46.5138 89.8478"
+                    />
+
+                <path d="
+                        M 53.4862 89.8478
+                        A 40 40 0 0 0 82.7661 72.9431
+                        A 20 20 0 0 1 72.6274 72.6274
+                        A 35 35 0 0 1 60.9446 80.0702
+                        A 40 40 0 0 1 53.4862 89.8478"
+                    />
+            </g>
+            <g>
+                <path d="
+                        M 13.7477 33.0953
+                        A 40 40 0 0 0 13.7477 66.9047
+                        A 20 20 0 0 1 19.0904 58.2822
+                        A 35 35 0 0 1 19.0904 41.7178
+                        A 40 40 0 0 1 13.7477 33.0953"
+                    />
+
+                <path d="
+                        M 86.2523 33.0953
+                        A 40 40 0 0 1 86.2523 66.9047
+                        A 20 20 0 0 0 80.9096 58.2822
+                        A 35 35 0 0 0 80.9096 41.7178
+                        A 40 40 0 0 0 86.2523 33.0953"
+                    />
+            </g>
+            <g>
+                <path d="
+                        M 46.0279 12.2082
+                        A 40 40 0 0 0 35.2159 32.3810
+                        A 20 15 0 0 1 37.7870 35.4452
+                        A 10 10 0 0 1 43.1596 31.2061
+                        A 15 20 0 0 1 46.0279 12.2082
+                        "
+                      />
+
+                <path d="
+                        M 53.9721 12.2082
+                        A 40 40 0 0 1 64.7841 32.3810
+                        A 20 15 0 0 0 62.2130 35.4452
+                        A 10 10 0 0 0 56.8404 31.2061
+                        A 15 20 0 0 0 53.9721 12.2082
+                        "
+                        />
+
+                <path d="
+                        M 46.0279 87.7918
+                        A 40 40 0 0 1 35.2159 67.6190
+                        A 20 15 0 0 0 37.7870 64.5548
+                        A 10 10 0 0 0 43.1596 68.7939
+                        A 15 20 0 0 0 46.0279 87.7918
+                        "
+                        />
+
+                <path d="
+                        M 53.9721 87.7918
+                        A 40 40 0 0 0 64.7841 67.6190
+                        A 20 15 0 0 1 62.2130 64.5548
+                        A 10 10 0 0 1 56.8404 68.7939
+                        A 15 20 0 0 1 53.9721 87.7918
+                        "
+                        />
+            </g>
+            <g>
+                <rect x="48" y="31" height="10" width="4" transform="rotate(30 50 50)"></rect>
+                <rect x="48" y="31" height="10" width="4" transform="rotate(90 50 50)"></rect>
+                <rect x="48" y="31" height="10" width="4" transform="rotate(150 50 50)"></rect>
+                <rect x="48" y="31" height="10" width="4" transform="rotate(210 50 50)"></rect>
+                <rect x="48" y="31" height="10" width="4" transform="rotate(270 50 50)"></rect>
+                <rect x="48" y="31" height="10" width="4" transform="rotate(-30 50 50)"></rect>
+            </g>
+            <g stroke-width="0.5">
+                <path d="
+                    M 21.0222 42.2354
+                    A 40 40 0 0 0 21.0222 57.7646
+                    A 20 15 0 0 1 30.3038 53.4730
+                    A 10 10 0 0 1 30.3038 46.5270
+                    A 15 20 0 0 1 21.0222 42.2354
+                    "></path>
+
+                <path d="
+                    M 78.9778 42.2354
+                    A 40 40 0 0 1 78.9778 57.7646
+                    A 20 15 0 0 0 69.6962 53.4730
+                    A 10 10 0 0 0 69.6962 46.5270
+                    A 15 20 0 0 0 78.9778 42.2354
+                    "></path>
+            </g>
+            <g fill="#fff">
+                <path d="
+                    M 28.7868 28.7868
+                    A 20 15 0 0 1 34.5731 31.6149
+                    A 15 20 0 0 1 37.7979 22.5936
+                    A 40 40 0 0 0 28.7868 28.7868
+                    "></path>
+
+                <path d="
+                    M 71.2132 28.7868
+                    A 20 15 0 0 0 65.4269 31.6149
+                    A 15 20 0 0 0 62.2021 22.5936
+                    A 40 40 0 0 1 71.2132 28.7868
+                    "></path>
+
+                <path d="
+                    M 28.7868 71.2132
+                    A 20 15 0 0 0 34.5731 68.3851
+                    A 15 20 0 0 0 37.7979 77.4064
+                    A 40 40 0 0 1 28.7868 71.2132
+                    "></path>
+
+                <path d="
+                    M 71.2132 71.2132
+                    A 20 15 0 0 1 65.4269 68.3851
+                    A 15 20 0 0 1 62.2021 77.4064
+                    A 40 40 0 0 0 71.2132 71.2132
+                    "></path>
+            </g>
+            <!--上，左下，右下-->
+            <g transform="translate(-1 0)" fill="#fff">
+                <circle cx="50" cy="25" r="4" transform="translate(1 0)"/>
+                <circle cx="71.6506" cy="62.5" r="4"/>
+                <circle cx="28.3494" cy="62.5" r="4"/>
+            </g>
+            <g transform="translate(0.6 0)" stroke-width="0.5">
+                <circle cx="50" cy="75" r="4"/>
+                <circle cx="71.6506" cy="37.5" r="4"/>
+                <circle cx="28.3494" cy="37.5" r="4"/>
+            </g>
+            <g stroke-width="0.5"><!--外环方块-->
+                <g>
+                    <rect x="50" y="4" height="3" width="2" transform=""></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-4 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-8 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-12 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-16 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-20 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-24 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-28 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-32 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(4 50 50)"></rect>
+                </g>
+                <g transform="rotate(-42 50 50)">
+                    <rect x="50" y="4" height="3" width="2" transform=""></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-4 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-8 50 50)"></rect>
+                </g>
+                <g transform="rotate(-61 50 50)">
+                    <rect x="50" y="4" height="3" width="2" transform=""></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-4 50 50)"></rect>
+                </g>
+                <g transform="rotate(-74 50 50)">
+                    <rect x="50" y="4" height="3" width="2" transform=""></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-4 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-8 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-12 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-16 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-20 50 50)"></rect>
+                </g>
+                <g transform="rotate(-103 50 50)">
+                    <rect x="50" y="4" height="3" width="2" transform=""></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-4 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-8 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-12 50 50)"></rect>
+                </g>
+                <g transform="rotate(-125 50 50)">
+                    <rect x="50" y="4" height="3" width="2" transform=""></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-4 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-8 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-12 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-16 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-20 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-24 50 50)"></rect>
+                </g>
+                <g transform="rotate(-159 50 50)">
+                    <rect x="50" y="4" height="3" width="2" transform=""></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-4 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-8 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-12 50 50)"></rect>
+                </g>
+                <g transform="rotate(-182 50 50)">
+                    <rect x="50" y="4" height="3" width="2" transform=""></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-4 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-8 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-12 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-16 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-20 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-24 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-28 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-32 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-36 50 50)"></rect>
+                </g>
+                <g transform="rotate(-229 50 50)">
+                    <rect x="50" y="4" height="3" width="2" transform=""></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-4 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-8 50 50)"></rect>
+                </g>
+                <g transform="rotate(-247 50 50)">
+                    <rect x="50" y="4" height="3" width="2" transform=""></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-4 50 50)"></rect>
+                </g>
+                <g transform="rotate(-261 50 50)">
+                    <rect x="50" y="4" height="3" width="2" transform=""></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-4 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-8 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-12 50 50)"></rect>
+                </g>
+                <g transform="rotate(-282 50 50)">
+                    <rect x="50" y="4" height="3" width="2" transform=""></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-4 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-8 50 50)"></rect>
+                </g>
+                <g transform="rotate(-300 50 50)">
+                    <rect x="50" y="4" height="3" width="2" transform=""></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-4 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-8 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-12 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-16 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-20 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-24 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-28 50 50)"></rect>
+                </g>
+                <g transform="rotate(-338 50 50)">
+                    <rect x="50" y="4" height="3" width="2" transform=""></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-4 50 50)"></rect>
+                    <rect x="50" y="4" height="3" width="2" transform="rotate(-8 50 50)"></rect>
+                </g>
+            </g>
+            <g>
+                <g>
+
+                </g>
+            </g>
+        </g>
+    </svg>
+</body>
+</html>
